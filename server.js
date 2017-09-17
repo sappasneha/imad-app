@@ -106,10 +106,10 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 var counter=0;
-app.get('/counter',funcyion(req,res){
+app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
-})
+});
 app.get('/:articlename',function(req,res){
     var articlename=req.params.articlename;
      res.send((createtemplate(articles[articlename]) ));
