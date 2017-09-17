@@ -104,6 +104,12 @@ app.get('/ui/main.js', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
+
+var counter=0;
+app.get('/counter',funcyion(req,res){
+    counter=counter+1;
+    res.send(counter.toString());
+})
 app.get('/:articlename',function(req,res){
     var articlename=req.params.articlename;
      res.send((createtemplate(articles[articlename]) ));
